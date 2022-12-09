@@ -1,5 +1,4 @@
-
-from aluno import Aluno
+'''
 
 class Disciplina:
    def __init__(self, nome: str, carga_horaria: int, descricao: str, semestre: str, ano: int):
@@ -22,8 +21,7 @@ class Curso:
          curso.nome = input('Informe nome:')
          curso.descricao = input('Descricao do curso:')
          cursos.append(curso)
-
-'''   def matricular_aluno(self, ):
+   def matricular_aluno(self, ):
       self.alunos.append(Aluno())
       
    def imprimir_dados_curso(self)-> None:
@@ -32,12 +30,11 @@ class Curso:
 
    def listar_cursos(self):
       print(f'{self.cursos[0]}')'''
-
-'''n = input('informe nome:')
+'''
+n = input('informe nome:')
 d = input('Informe descricao')'''
 
          
       
 
    
-

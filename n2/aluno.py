@@ -1,4 +1,4 @@
-from curso import Curso
+'''from curso import Curso
 from pessoa_fisica import Pessoa_fisica
 
 
@@ -7,8 +7,7 @@ class Aluno(Pessoa_fisica):
       super().__init__( nome)
       self.matricula=matricula
       self.ano_ingresso=ano_ingresso
-   
-'''   def matricular_aluno(self,nome: str, matricula:str, ano_ingresso: int):
+     def matricular_aluno(self,nome: str, matricula:str, ano_ingresso: int):
       alunos=[]
       alunos.append(Aluno(nome=nome, matricula=matricula, ano_ingresso=ano_ingresso))
       print('Matricular aluno:\n\n')
@@ -17,5 +16,3 @@ class Aluno(Pessoa_fisica):
          alun.matricula = input('Informe matricula')
          alun.ano_ingresso = int(input('Informe ano de ingresso:'))
          print(alun)'''
-
-A
