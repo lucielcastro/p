@@ -2,6 +2,23 @@
 cursos = []
 alunos = []
 
+def editar_aluno( nome):
+      for aluno in alunos:
+         if nome == aluno.nome:
+            print(aluno)
+            print('Qual dados deseja editar?\n\n1-todos')
+            op = int(input('Inorme:'))
+            if op == 1:
+               aluno.nome = input('Nome:')
+               aluno.curso = input('Curso:')
+               aluno.matricula = input('Matricula:')
+               aluno.ano_ingresso = int(input('Ano ingresso:'))
+               return aluno.nome, aluno.curso, aluno.matricula, aluno.ano_ingresso
+               #print(f'Dados atualizados: {aluno}')
+         print('Aluno não encontrado na base de dados')
+         encontrar_aluno = input('Informe nome novamente:')
+         editar_aluno(encontrar_aluno)
+
 def imprimir_cursos_disponiveis():
    for curso in cursos:
       print('CURSOS DISPONIVEIS:')
@@ -16,9 +33,8 @@ def verificar_cursos( curso: str):
    imprimir_cursos_disponiveis()
    encontrar_curso = input('Informe um curso:')
    verificar_cursos(encontrar_curso)
-   return curs
+   return curs.nome
    
-
 class Pessoa_fisica:
    def __init__(self, nome: str):
       self.nome=nome
@@ -34,18 +50,6 @@ class Aluno(Pessoa_fisica):
       alunos.append(Aluno(nome=nome, curso=curso, matricula=matricula, ano_ingresso=ano_ingresso))
       print('Aluno cadastrado com sucesso!')
    
-   def editar_aluno(self, nome):
-      for aluno in alunos:
-         if nome == aluno.nome:
-            print(aluno)
-            print('Qual dados deseja editar?\n\n1-todos')
-            op = int(input('Inorme:'))
-            if op == 1:
-               aluno.nome = input('Nome:')
-               aluno.curso = input('Curso:')
-               aluno.matricula = input('Matricula:')
-               aluno.ano_ingresso = int(input('Ano ingresso:'))
-               print(f'Dados atualizados: {aluno}')
 
    def imprimir_alunos(self):
       print('\n**** ALUNOS CADASTRADo ****')
@@ -121,13 +125,13 @@ while op2 !=0:
       curso_busca = v(curso)
       mat = input('Infome matricula: ')
       ano_ing = input('Informe ano ingresso: ')
-      aluno = Aluno(name, curso, mat, ano_ing)
+      aluno = Aluno(name, curso_busca, mat, ano_ing)
       aluno.cadastrar_aluno(name, curso, mat, ano_ing)
       print(f'Nome: {aluno.nome}\nCurso: {aluno.curso}\nMatricula: {aluno.matricula}\nAno de ingresso: {aluno.ano_ingresso}')
    elif op2 == 2:
       nome = input('Informe nome: ')
-      nome.
-   
+      aluno_busca = editar_aluno(nome)
+      
    elif op2 == 4:
       aluno.imprimir_alunos()
    
